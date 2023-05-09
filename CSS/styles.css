@@ -1,0 +1,253 @@
+@font-face {
+    font-family: RedHatDisplay-Black;
+    src: url(../font/RedHatDisplay-Black.ttf);
+}
+
+@font-face {
+    font-family: RedHatDisplay-Bold;
+    src: url(../font/RedHatDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: RedHatDisplay-Medium;
+    src: url(../font/RedHatDisplay-Medium.ttf);
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --Transparent-Charcoal: rgba(11, 11, 11, 0.2);
+    --Light-blue:#766CF1;
+    --Bright-Blue: hsl(245, 75%, 52%);
+
+    --RedHatDisplay-Black: 'RedHatDisplay-Black';
+    --RedHatDisplay-Bold: 'RedHatDisplay-Bold';
+    --RedHatDisplay-Medium: 'RedHatDisplay-Medium';
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-color: var(--Pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: var(--RedHatDisplay-Medium), sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 1.5rem;
+}
+
+#container {
+    background-color: var(--white);
+    text-align: center;
+    border-radius: 20px;
+}
+
+#content {
+    margin-bottom: 1rem;
+}
+
+#hero-img {
+    width: 450px;
+    border-radius: 20px 20px 0 0;
+}
+
+.title {
+    color: var(--Dark-blue);
+    margin-top: 2rem;
+}
+
+.description {
+    color: var(--Desaturated-blue);
+    margin-top: 1rem;
+}
+
+.plan-box {
+    background-color:var(--Very-pale-blue);
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    padding: 1em;
+    gap: 6em;
+    border-radius: 0.625rem;
+}
+
+.plan-box-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#a-plan {
+    color: var(--Dark-blue);
+    font-family: var(--RedHatDisplay-Bold);
+}
+
+#price {
+    color: var(--Desaturated-blue);
+}
+
+.change-a {
+    color: var(--Bright-Blue);
+    font-family: var(--RedHatDisplay-Bold);
+    margin-top: 1rem;
+    transition: 0.4s ease;
+}
+
+.change-a:is(:hover, :focus) {
+    color: var(--Light-blue);
+}
+
+.pay-btn {
+    display: block;
+    background-color: var(--Bright-Blue);
+    padding: 1em 1.5em;
+    margin-top: 2rem;
+    border-radius: 0.625rem;
+    box-shadow: 5px 5px 5px var(--Transparent-Charcoal);
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+.pay-btn:is(:hover, :focus) {
+    background-color: var(--Light-blue);
+}
+
+.cancel-a {
+    color: var(--Desaturated-blue);
+    text-decoration: none;
+    font-family: var(--RedHatDisplay-Medium);
+    transition: 0.4s ease;
+}
+
+.cancel-a:is(:hover, :focus) {
+    color: var(--Dark-blue);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 375px) {
+    #container {
+        margin-top: 1rem;
+        height: 475px;
+    }
+
+    #container, #hero-img {
+        width: 325px;
+    }
+
+    .title {
+        margin-top: 0.5rem;
+        font-size: 20px;
+    }
+
+    .description {
+        margin-top: 0.5rem;
+        font-size: 15px;
+    }
+
+    .plan-box, .pay-btn {
+        margin-left: 1.75rem;
+        height: 50px;
+        width: 270px;
+    }
+
+    #a-plan, #price {
+        font-size: 10px;
+    }
+
+    #price {
+        margin-top: 0.125rem;
+    }
+
+    .music-icon {
+        height: 35px;
+    }
+
+    .change-a {
+        margin-top: 0.25rem;
+        font-size: 8px;
+    }
+
+    .pay-btn {
+        margin-bottom: 1rem;
+    }
+
+    .pay-btn, .cancel-a {
+        height: 40px;
+        font-size: 12.5px;
+    }
+
+    .attribution {
+        margin-right: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #container {
+        height: 675px;
+    }
+
+    #container, #hero-img {
+        width: 450px;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .pay-btn {
+        padding: 1.5em 1.5em;
+    }
+
+    .plan-box, .pay-btn {
+        margin-left: 2.5rem;
+        height: 75px;
+        width: 370px;
+    }
+
+    .pay-btn, .cancel-a {
+        font-size: 18px;
+    }
+
+    #a-plan, #price {
+        font-size: 18px;
+    }
+
+    #price {
+        margin-top: 0.25rem;
+    }
+
+    .music-icon {
+        height: 48px;
+    }
+
+    .change-a {
+        font-size: 15px;
+    }
+}
